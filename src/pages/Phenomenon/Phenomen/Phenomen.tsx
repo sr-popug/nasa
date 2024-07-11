@@ -86,8 +86,8 @@ export default function Phenomen() {
 				<YMaps>
 					<div className='map'>
 						<Map
-							height={'600px'}
-							width={'70vw'}
+							height={'650px'}
+							width={'100vw'}
 							defaultState={{
 								center: cords,
 								zoom: 8,

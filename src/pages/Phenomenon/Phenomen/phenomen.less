@@ -19,16 +19,12 @@
 			gap: 5px;
 			align-items: center;
 		}
-		.date {
-			font-size: 1.15em;
-			span {
-				color: #ffcc00;
-			}
-		}
 	}
 	.info {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 10px;
 
 		.info-block {
 			margin-top: 20px;
@@ -52,7 +48,25 @@
 	}
 	.map {
 		margin-top: 50px;
-		width: 100vw;
+		width: 70vw;
 		height: 600px;
+		position: relative;
+		left: -15vw;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.phenomen {
+		.top .left h2 {
+			font-size: 1.5em;
+		}
+		margin-left: 5vw;
+		width: 90vw;
+		.map {
+			left: -5vw;
+			div {
+				width: 90vw;
+			}
+			width: 90vw;
+		}
 	}
 }
