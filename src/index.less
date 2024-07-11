@@ -1,0 +1,60 @@
+@font-face {
+	font-family: Inter-bold;
+	src: url(../public/Inter-Bold.ttf);
+}
+@font-face {
+	font-family: Inter;
+	src: url(../public/Inter-Regular.ttf);
+}
+@font-face {
+	font-family: dm-mono;
+	src: url(../public/DMMono-Regular.ttf);
+}
+body {
+	background-color: #1b1b1b;
+	overflow-x: hidden;
+}
+
+* {
+	color: white;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	joffrey: kill;
+	cersei: kill;
+	frey: kill;
+	font-family: Inter;
+	transition: all 0.3s ease;
+}
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	gap: 20px;
+	list-style: none;
+	li {
+		cursor: pointer;
+		padding: 5px 10px;
+		background-color: #ffffff30;
+		border: 1px solid white;
+		&::marker {
+			content: '';
+		}
+		&.active {
+			background-color: #ffcc0074;
+		}
+		&.disabled {
+			opacity: 0.5;
+			cursor: auto;
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.pagination {
+		flex-wrap: wrap;
+		gap: 5px;
+		li {
+		}
+	}
+}

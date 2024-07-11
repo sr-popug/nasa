@@ -1,0 +1,141 @@
+article.imageDay {
+	margin-top: 50px;
+	margin-left: 15vw;
+	width: 70vw;
+	.flex-top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+		h2 {
+			font-size: 2em;
+			width: fit-content;
+			&::after {
+				content: '';
+				display: block;
+				background-color: #ffcc00;
+				height: 10px;
+				transform: skew(-30deg);
+				opacity: 0.5;
+				width: 100%;
+				position: relative;
+				top: -5px;
+				z-index: -1;
+			}
+		}
+		form {
+			display: flex;
+			gap: 5px;
+			align-items: flex-start;
+			input {
+				background-color: black;
+				font-size: 1.2em;
+				padding: 5px 10px;
+			}
+			button {
+				cursor: pointer;
+				font-size: 1.2em;
+				background-color: black;
+				padding: 5px 15px;
+				&:hover {
+					color: black;
+					background-color: white;
+				}
+			}
+		}
+	}
+	.images {
+		.image {
+			gap: 50px;
+			margin-bottom: 50px;
+			display: flex;
+			justify-content: space-between;
+			&:nth-child(2n) {
+				flex-direction: row-reverse;
+			}
+
+			img {
+				width: 700px;
+			}
+		}
+
+		.info {
+			h3 {
+				margin-bottom: 10px;
+				font-size: 2em;
+			}
+			p.desc {
+				opacity: 0.7;
+				text-align: justify;
+			}
+			.line {
+				margin-top: 20px;
+				height: 1px;
+				width: 100%;
+				background-color: rgb(74, 74, 74);
+				margin-bottom: 20px;
+			}
+			.bottom {
+				display: flex;
+				justify-content: space-between;
+
+				.date {
+					color: #ffcc00;
+				}
+				.author {
+					span {
+						color: #ffcc00;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1500px) {
+	article.imageDay {
+		margin-left: 5vw;
+		width: 90vw;
+	}
+}
+@media screen and (max-width: 1178px) {
+	article.imageDay {
+		margin-left: 5vw;
+		width: 90vw;
+		.images {
+			.image {
+				img {
+					width: 500px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 980px) {
+	article.imageDay {
+		margin-left: 5vw;
+		width: 90vw;
+		.images {
+			.image {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column-reverse;
+				align-items: center;
+				&:nth-child(2n) {
+					flex-direction: column-reverse;
+				}
+				img {
+					width: 90vw;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 586px) {
+	article.imageDay {
+		.flex-top {
+			flex-wrap: wrap;
+			form {
+				margin-top: 20px;
+			}
+		}
+	}
+}
